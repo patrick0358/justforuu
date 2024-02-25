@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #proposal {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #comment-box {
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I LOVE YOU BEAUTY BEGAM. DO YOU?</h1>
+    </header>
+    <main>
+        <section id="proposal">
+            <p>
+                Tumhare dil ne humare dil daboch liya hai..<br>
+                Humare chati ka chain or karaar noch liya hai.<br>
+                Ab jyada chu cha chu mat krna, Beauty Begam,<br>
+                Tumhe wife banana hai soch liya hai...
+            </p>
+        </section>
+        <section id="comment-box">
+            <h2>Share your feelings:</h2>
+            <form id="comment-form">
+                <textarea name="feelings" id="feelings" placeholder="Write your feelings here..." required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Designed by PRATIK</p>
+    </footer>
+
+    <script>
+        document.getElementById("comment-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            var feelings = document.getElementById("feelings").value;
+            alert("Feelings shared by Beauty Yadav: " + feelings);
+            // You can send the feelings to a server for further processing if needed
+        });
+    </script>
+</body>
+</html>
